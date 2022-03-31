@@ -5,26 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      table {
+        padding: 10px;
+        max-width: 100%;
+        margin-top: 20px;
+        flex: 0.3;
+      }
+
+      th,
+      tr {
+        padding: 5px;
+        text-align: center;
+        background-color: rgb(242, 240, 255);
+      }
+
+      tr:nth-child(odd) {
+        background-color: white;
+      }
+      .hidden {
+        display: none;
+      }
+      input:invalid {
+        border-color: red;
+      }
+      .Main-Form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+        max-width: 300px;
+      }
+      .Error {
+        color: red;
+      }
+    </style>
   </head>
   <body>
-    <div id="container">
-      <table>
-        <thead>
-          <tr>
-            <th>Full Name</th>
-            <th>Telephone number</th>
-          </tr>
-        </thead>
-        <tbody id="usersList"></tbody>
-      </table>
-      <form onsubmit="return false">
-        <label>Name: </label>
-        <input id="name" type="text" />
-        <label>Number: </label>
-        <input id="phone" type="text" />
-        <button data-action="add">Добавить</button>
-      </form>
-    </div>
+    <div id="container"></div>
 
     <script src="index.js"></script>
   </body>
